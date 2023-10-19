@@ -572,8 +572,8 @@ ol {
     0px 1px 6px 0px #2e2f4214;
 }
 
-.projects-link:focus .project-description,
-.projects-link:hover .project-description {
+.project-card:focus .project-description,
+.project-card:hover .project-description {
   transform: translateY(0%);
 }
 
