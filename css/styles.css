@@ -105,11 +105,12 @@ img {
 }
 
 .active::after {
-  content: " ";
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
   height: 4px;
+  width: 100%;
   background-color: var(--pressed-color);
   border-radius: 2px;
 }
@@ -571,6 +572,11 @@ ol {
     0px 1px 6px 0px #2e2f4214;
 }
 
+.projects-link:focus .project-description,
+.projects-link:hover .project-description {
+  transform: translateY(0%);
+}
+
 .project-card {
   position: relative;
   overflow: hidden;
@@ -591,11 +597,6 @@ ol {
   text-transform: capitalize;
   transform: translateY(100%);
   transition: transform var(--tr-dur) var(--tr-fn);
-}
-
-.projects-item:hover .project-description,
-.projects-item:focus .project-description {
-  transform: translateY(0%);
 }
 
 .project-name {
@@ -666,9 +667,12 @@ ol {
 }
 
 .close-button:hover,
-.close-button:focus {
-  background-color: var(--white-background);
+.close-button:focus,
+.modal-svg:focus,
+.modal-svg:hover {
+  background-color: var(--pressed-color);
   border: none;
+  fill: var(--white-background);
 }
 
 .modal-svg {
